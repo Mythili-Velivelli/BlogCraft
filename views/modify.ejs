@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post blog</title>
+</head>
+<body>
+
+    
+    <%- include("partials/header") %>
+    <h2 class="center"><%= heading%></h2> 
+
+    <form action="<%= locals.post ? '/update/' + post.id : '/submit' %>" method="POST">
+        <input type="text" name="title" placeholder="Title" value="<%= locals.post ? post.title : '' %>" required>
+        <textarea name="content" class="textArea" placeholder="Your post..." required ><%= locals.post ? post.content : '' %></textarea><br><br>
+        <button type="submit" class="publish"><%=submit%></button>
+    </form> 
+    </body>
+    <%- include("partials/footer") %>
+</body>
+</html>
