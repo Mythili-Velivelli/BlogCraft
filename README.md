@@ -13,6 +13,15 @@ A simple blogging app using Node.js, Express, EJS, and PostgreSQL. Users can cre
 - Node.js + Express
 - PostgreSQL
 - EJS + HTML/CSS
+## Screenshots
+
+### Home Page
+![Home Page](assets/Home-Page.png) 
+
+### Create Post Page
+![Create Post](assets/New-Blog.png) 
+### Edit Post Page 
+![Create Post](assets/Edit-Blog.png) 
 
 ## How to Run
 
