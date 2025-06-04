@@ -15,14 +15,6 @@ const pool = new Pool({
   password: process.env.PGPASSWORD,
   port: Number(process.env.PGPORT),
 });
-// PostgreSQL connection
-// const pool = new Pool({
-//   user: "postgres",
-//   host: "localhost",
-//   database: "blog-app",
-//   password: "292004",
-//   port: 5432,
-// });
 
 // Middleware
 app.use(express.static("public"));
