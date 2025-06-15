@@ -9,11 +9,10 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const pool = new Pool({
-    DATABASE_URL: process.env.PG_DATABASE_URL,
-  // host: process.env.PG_HOST,
-  // database: process.env.PG_DATABASE,
-  // password: process.env.PG_PASSWORD,
-  // port: Number(process.env.PG_PORT),
+  host: process.env.PG_HOST,
+  database: process.env.PG_DATABASE,
+  password: process.env.PG_PASSWORD,
+  port: Number(process.env.PG_PORT),
 });
 
 
@@ -26,10 +25,8 @@ app.set("view engine", "ejs");
 app.get("/", async (req, res) => {
   try {
     const result = await pool.query("SELECT * FROM posts ORDER BY id DESC");
-    console.log("Fetched:", result.rows);
     res.render("index", { posts: result.rows });
   } catch (err) {
-    console.log("Trying to fetch posts...");
     res.status(500).send("Can't send the posts to browser");
   }
 });
