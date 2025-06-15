@@ -8,21 +8,14 @@ const port = process.env.PORT || 3000;
 import dotenv from "dotenv";
 dotenv.config();
 
-// const pool = new Pool({
-//   user: process.env.PGUSER,
-//   host: process.env.PGHOST,
-//   database: process.env.PGDATABASE,
-//   password: process.env.PGPASSWORD,
-//   port: Number(process.env.PGPORT),
-// });
 const pool = new Pool({
-  user: "blogcraft_db_ksdf_user",
-  host: "dpg-d17gri95pdvs738ch2og-a.oregon-postgres.render.com",
-  database: "blogcraft_db_ksdf",
-  password: "rbfIej9oKuLG6cAFyCa6uZlGbaESW4i4",
-  port: 5432,
-  ssl: { rejectUnauthorized: false }
+  user: process.env.PG_USER,
+  host: process.env.PG_HOST,
+  database: process.env.PG_DATABASE,
+  password: process.env.PG_PASSWORD,
+  port: Number(process.env.PG_PORT),
 });
+
 
 // Middleware
 app.use(express.static("public"));
