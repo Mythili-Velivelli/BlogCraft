@@ -25,8 +25,10 @@ app.set("view engine", "ejs");
 app.get("/", async (req, res) => {
   try {
     const result = await pool.query("SELECT * FROM posts ORDER BY id DESC");
+    console.log("Fetched:", result.rows);
     res.render("index", { posts: result.rows });
   } catch (err) {
+    console.log("Trying to fetch posts...");
     res.status(500).send("Can't send the posts to browser");
   }
 });
