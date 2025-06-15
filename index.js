@@ -63,7 +63,7 @@ app.get("/edit/:id", async (req, res) => {
       post: post,
     });
   } catch (err) {
-    res.status(500).send("Error fetching post for edit");
+     res.status(500).send("Error fetching post for edit");
   }
 });
 
