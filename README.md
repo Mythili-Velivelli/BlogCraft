@@ -16,12 +16,12 @@ A simple blogging app using Node.js, Express, EJS, and PostgreSQL. Users can cre
 ## Screenshots
 
 ### Home Page
-![Home Page](assets/Home-Page.png) 
+![Home Page](assets/homePage.png) 
 
 ### Create Post Page
-![Create Post](assets/New-Blog.png) 
+![Create Post](assets/newPost.png) 
 ### Edit Post Page 
-![Create Post](assets/Edit-Blog.png) 
+![Create Post](assets/editPost.png) 
 
 ## How to Run
 
