@@ -1,4 +1,4 @@
-# BlogSpot 📝
+# BlogCraft 📝
 
 A simple blogging app using Node.js, Express, EJS, and PostgreSQL. Users can create, edit, and delete blog posts.
 
