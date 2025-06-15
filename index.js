@@ -27,7 +27,7 @@ app.get("/", async (req, res) => {
     const result = await pool.query("SELECT * FROM posts ORDER BY id DESC");
     res.render("index", { posts: result.rows });
   } catch (err) {
-    res.status(500).send("fuck you");
+    res.status(500).send("Can't send the posts to browser");
   }
 });
 
